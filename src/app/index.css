@@ -1,0 +1,32 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  overflow-x: hidden;
+  overflow-y: visible;
+  scroll-behavior: smooth;
+}
+
+.header-logo::after{
+  display: none;
+}
+
+.header-menu-link {
+  width: max-content;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.15rem;
+  text-transform: capitalize;
+  font-size: 15px;
+  font-weight: 600;
+  transition: all 350ms;
+  a {
+    text-decoration: none;
+    &.active{
+      color: #2DA2DC;
+    }
+  }
+}
