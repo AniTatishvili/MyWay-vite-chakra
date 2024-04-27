@@ -95,7 +95,7 @@ export const HomeDestination = () => {
                   <Box h={"100%"} bg={"#fff"} borderRadius={"4px"} boxShadow={"1px 0 6px 1px rgba(0,0,0,.16);"} p={3}>
                     <Image src={item.src} alt="slider_image" />
                     <Flex flexDir={"column"}>
-                      <Box as="span" color={"#745C26"} fontSize={"26px"} p={4}>{t(item.country)}</Box>
+                      <Box as="span" fontSize={"26px"} p={4}>{t(item.country)}</Box>
                       {/* <Box as="p">{t(item.desc_text)}</Box> */}
                     </Flex>
                   </Box>

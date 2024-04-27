@@ -20,6 +20,7 @@
       "TEXT": "We're fairly sure that page used to be here, but seems to have gone missing. We do apologise on it's behalf."
     },
     "BUTTONS": {
+      "BOOK_NOW":"Book now",
       "BACK": "Get back"
     },
     "FOOTER": {

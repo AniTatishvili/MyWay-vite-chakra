@@ -30,3 +30,11 @@ html {
     }
   }
 }
+
+/*datepicker*/
+.react-datepicker__input-container {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 1px 0 6px 1px rgba(0, 0, 0, .16);
+  padding: 8px 16px;
+}
