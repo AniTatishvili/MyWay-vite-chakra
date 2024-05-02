@@ -13,6 +13,8 @@
     "@chakra-ui/react": "^2.8.2",
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
+    "@fontsource/karla": "^5.0.20",
+    "@fontsource/montserrat": "^5.0.18",
     "axios": "^1.6.8",
     "country-flag-icons": "^1.5.11",
     "formik": "^2.4.5",

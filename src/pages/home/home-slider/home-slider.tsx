@@ -1,6 +1,5 @@
-import React, { RefObject, useRef, useState } from "react";
+import React, { useRef } from "react";
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
 
 import { Box, Button, Flex } from "@chakra-ui/react";
 import { BookingCalendarForm } from "src/widgets/booking-calendar-form";
@@ -11,8 +10,8 @@ import { BookingCalendarForm } from "src/widgets/booking-calendar-form";
 // import { MdOutlineKeyboardDoubleArrowLeft, MdOutlineKeyboardDoubleArrowRight } from "react-icons/md";
 
 // swiper
-import Autoplay from "swiper";
-import Navigation from "swiper";
+// import Autoplay from "swiper";
+// import Navigation from "swiper";
 import { Swiper, SwiperRef, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
@@ -27,16 +26,15 @@ import MyWayCapsuleHotel from "../../../app/assets/videos/MyWayCapsuleHotel.webm
 // import { HomeSliderButton } from "./home-slider-button";
 // import { HomeSliderSoundBtn } from "./home-slider-sound-btn";
 
-
 export const HomeSlider = () => {
-  const { t, i18n } = useTranslation("home");
+  const { t } = useTranslation("home");
 
-  const [videoSoundState, setVideoSoundState] = useState<boolean>(true);
+  // const [videoSoundState, setVideoSoundState] = useState<boolean>(true);
 
-  const [swiperKey, setSwiperKey] = useState(0);
+  const [swiperKey, setSwiperKey] = React.useState(0);
 
   const refSlide = useRef<SwiperRef>(null);
-  const refBtn = useRef<HTMLButtonElement>(null);
+  // const refBtn = useRef<HTMLButtonElement>(null);
 
   const handleClickChangeSlide = (pos: string) => {
     pos === "left" ? refSlide.current?.swiper.slidePrev() : refSlide.current?.swiper.slideNext();
@@ -53,7 +51,6 @@ export const HomeSlider = () => {
           flexDir={"column"}
           gap={{ base: "2", md: "5" }}
           letterSpacing={"2px"}
-          fontFamily={"RalewayVariable"}
           fontSize={"3xl"}
           fontWeight={"extrabold"}
           textAlign={"center"}
@@ -72,8 +69,8 @@ export const HomeSlider = () => {
           ref={refSlide}
           style={{
             height: "auto",
-          //   maxHeight: "calc(100vh - 100px)",
-              maxHeight: "675px",
+            //   maxHeight: "calc(100vh - 100px)",
+            maxHeight: "675px",
             overflow: "hidden",
           }}
           // onSlideChange={(swiper) => handleSwiperTurnOffSlide(swiper)}
@@ -87,20 +84,20 @@ export const HomeSlider = () => {
           slidesPerView={1}
           spaceBetween={0}>
           {/* {videoItemsArr.map((item, i) => ( */}
-            <SwiperSlide>
-              <Box h={"100%"}>
-                <video autoPlay loop muted={true} style={{ width: "100%", height: "100%", background:"#000", objectFit: "contain" }}>
-                  <source src={MyWayCapsuleHotel} />
+          <SwiperSlide>
+            <Box h={"100%"}>
+              <video autoPlay loop muted={true} style={{ width: "100%", height: "100%", background: "#000", objectFit: "contain" }}>
+                <source src={MyWayCapsuleHotel} />
               </video>
-              </Box>
-            </SwiperSlide>
-            <SwiperSlide>
-              <Box h={"100%"}>
-                  <video autoPlay loop muted={true} style={{ width: "100%", height: "100%", background:"#000", objectFit: "contain" }}>
-                      <source src={MyWayCapsuleHotel} />
-                  </video>
-              </Box>
-            </SwiperSlide>
+            </Box>
+          </SwiperSlide>
+          <SwiperSlide>
+            <Box h={"100%"}>
+              <video autoPlay loop muted={true} style={{ width: "100%", height: "100%", background: "#000", objectFit: "contain" }}>
+                <source src={MyWayCapsuleHotel} />
+              </video>
+            </Box>
+          </SwiperSlide>
           {/* ))} */}
         </Swiper>
 
@@ -147,4 +144,3 @@ export const HomeSlider = () => {
     </Flex>
   );
 };
-

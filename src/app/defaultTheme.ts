@@ -4,6 +4,7 @@ import { extendTheme, ThemeConfig } from "@chakra-ui/react";
 interface Colors {
   brand: {
     black: string;
+    blue: string;
     white: string;
     dark: string;
     darkA: string;
@@ -24,7 +25,7 @@ interface Colors {
 }
 
 interface CustomStyles {
-  global: (props: StyleFunctionProps) => Record<string, any>;
+  global: (props: StyleFunctionProps) => Record<string, object>;
 }
 
 const config: ThemeConfig = {
@@ -47,13 +48,14 @@ const styles: CustomStyles = {
 };
 
 const fonts = {
-  heading: `'RalewayVariable', sans-serif`,
-  body: `'NunitoVariable', sans-serif`,
+  heading: `'Karla', sans-serif`,
+  body: `'Monserrat', sans-serif`,
 };
 
 const colors: Colors = {
   brand: {
     black: "#000000",
+    blue: "#2DA2DC",
     white: "#ffffff",
     dark: "#242424",
     darkA: "#121212",
@@ -67,7 +69,7 @@ const colors: Colors = {
     grey: "#eaeaea",
     greyA: "#d9d9d9",
     greyB: "#9d9d9d",
-    gold: "#dd9933",
+    gold: "#745C26",
     green: "#39884f",
     red: "#b92c2c",
   },

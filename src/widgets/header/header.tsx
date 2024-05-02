@@ -1,13 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import {
-  Flex,
-  Box,
-  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
-} from "@chakra-ui/react";
+import { Flex, Box, Menu, MenuButton, MenuList, MenuItem } from "@chakra-ui/react";
 import { PageSectionContent } from "src/entities/layouts/PageSectionContent";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { HeaderMenu } from "./menu/header-menu";
@@ -34,10 +27,7 @@ export const Header: React.FC = () => {
     i18n.changeLanguage(lng);
   };
 
-  const lngIconCode =
-    i18n.resolvedLanguage && i18n.resolvedLanguage !== "en"
-      ? i18n.resolvedLanguage
-      : "us";
+  const lngIconCode = i18n.resolvedLanguage && i18n.resolvedLanguage !== "en" ? i18n.resolvedLanguage : "us";
 
   return (
     <Flex className={s.header}>
@@ -61,23 +51,15 @@ export const Header: React.FC = () => {
                 borderRadius={"4px"}
                 transition={"all 350ms, border 100ms"}
                 boxShadow={"1px 0 6px 1px rgba(0,0,0,.16);"}
-                color={"#745C26"}
+                color={"brand.gold"}
                 _hover={{
-                  borderColor: "#2DA2DC",
-                  background: "#2DA2DC",
+                  borderColor: "brand.blue",
+                  background: "brand.blue",
                   boxShadow: "none",
                   color: "#fff",
-                }}
-              >
+                }}>
                 <Flex align={"center"} justify={"center"} gap={"1"}>
-                  <Flex
-                    w={6}
-                    h={6}
-                    justify={"center"}
-                    align={"center"}
-                    borderRadius={"50%"}
-                    overflow={"hidden"}
-                  >
+                  <Flex w={6} h={6} justify={"center"} align={"center"} borderRadius={"50%"} overflow={"hidden"}>
                     <ReactCountryFlag
                       countryCode={lngIconCode}
                       svg
@@ -96,13 +78,7 @@ export const Header: React.FC = () => {
               </MenuButton>
               <MenuList>
                 {Object.keys(LNGS).map((lng) => (
-                  <MenuItem
-                    key={lng}
-                    onClick={() => handleOption(lng)}
-                    color={i18n.resolvedLanguage === lng ? "#2DA2DC" : ""}
-                    textTransform={"capitalize"}
-                    fontSize={"14px"}
-                  >
+                  <MenuItem key={lng} onClick={() => handleOption(lng)} color={i18n.resolvedLanguage === lng ? "#2DA2DC" : ""} textTransform={"capitalize"} fontSize={"14px"}>
                     {LNGS[lng].nativeName}
                   </MenuItem>
                 ))}
