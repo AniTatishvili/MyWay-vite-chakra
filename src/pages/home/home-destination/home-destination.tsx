@@ -1,115 +1,180 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { PageSectionContent } from "src/entities/layouts/PageSectionContent";
+import { Box, Flex, Button } from "@chakra-ui/react";
+import { Swiper, SwiperRef, SwiperSlide } from "swiper/react";
+import { FaArrowRight, FaArrowLeft } from "react-icons/fa6";
 import { PTitle } from "src/shared/ui/headings";
-import { Box, Flex, Image } from "@chakra-ui/react";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { HomeDestinationSliderButton } from "./home-destination-slider-button";
+import { HomeDestinationSliderItem } from "./home-destination-slider-item";
 
 import "swiper/css";
 import "swiper/css/autoplay";
 import "swiper/css/navigation";
+import "swiper/swiper-bundle.css";
 
-import capsule_hotel_1 from "../../../app/assets/images/home/home-capsule-hotel/1.jpg";
-import capsule_hotel_2 from "../../../app/assets/images/home/home-capsule-hotel/10.jpg";
-import capsule_hotel_3 from "../../../app/assets/images/home/home-capsule-hotel/11.jpg";
-import capsule_hotel_4 from "../../../app/assets/images/home/home-capsule-hotel/12.jpg";
-import capsule_hotel_5 from "../../../app/assets/images/home/home-capsule-hotel/16.jpg";
-import { PButton } from "src/shared/ui/buttons";
+import vienna_video from "../../../app/assets/videos/home/home-destination/vienna.mp4";
+import baku_video from "../../../app/assets/videos/home/home-destination/baku.mp4";
+import georgia_video from "../../../app/assets/videos/home/home-destination/1.mp4";
+import hungary_video from "../../../app/assets/videos/home/home-destination/2.mp4";
+import israel_video from "../../../app/assets/videos/home/home-destination/3.mp4";
+
+import vienna_img from "../../../app/assets/images/home/home-destination/vienna.jpg";
+import baku_img from "../../../app/assets/images/home/home-destination/baku.jpg";
+import budapest_img from "../../../app/assets/images/home/home-destination/budapest.jpg";
+
+import hungary_icon from "../../../app/assets/images/home/home-destination-icons/hungary.png";
+import azerbaijan_icon from "../../../app/assets/images/home/home-destination-icons/azerbaijan.png";
+import georgia_icon from "../../../app/assets/images/home/home-destination-icons/georgia.png";
+import israel_icon from "../../../app/assets/images/home/home-destination-icons/israel.png";
+import austria_icon from "../../../app/assets/images/home/home-destination-icons/austria.png";
 
 interface SliderItemType {
-  id: number;
-  type: string;
-  src: string;
-  country: string;
-  desc_text: string;
+  videoSource: string;
+  bannerSource: string;
+  countryName: string;
+  iconSource: string;
 }
 
 const silderItemsArr: SliderItemType[] = [
   {
-    id: 1,
-    type: "image",
-    src: capsule_hotel_1,
-    country: "NEXT_DESTINATION.TITLES.HUNGARY",
-    desc_text: "NEXT_DESTINATION.DESC.1",
+    videoSource: hungary_video,
+    bannerSource: budapest_img,
+    countryName: "NEXT_DESTINATION.TITLES.HUNGARY",
+    iconSource: hungary_icon,
   },
   {
-    id: 2,
-    type: "image",
-    src: capsule_hotel_2,
-    country: "NEXT_DESTINATION.TITLES.AZERBAIJAN",
-    desc_text: "NEXT_DESTINATION.DESC.2",
+    videoSource: baku_video,
+    bannerSource: baku_img,
+    countryName: "NEXT_DESTINATION.TITLES.AZERBAIJAN",
+    iconSource: azerbaijan_icon,
   },
   {
-    id: 3,
-    type: "image",
-    src: capsule_hotel_3,
-    country: "NEXT_DESTINATION.TITLES.GEORGIA",
-    desc_text: "NEXT_DESTINATION.DESC.3",
+    videoSource: georgia_video,
+    bannerSource: budapest_img,
+    countryName: "NEXT_DESTINATION.TITLES.GEORGIA",
+    iconSource: georgia_icon,
   },
   {
-    id: 4,
-    type: "image",
-    src: capsule_hotel_4,
-    country: "NEXT_DESTINATION.TITLES.ISRAEL",
-    desc_text: "NEXT_DESTINATION.DESC.4",
+    videoSource: vienna_video,
+    bannerSource: vienna_img,
+    countryName: "NEXT_DESTINATION.TITLES.HUNGARY",
+    iconSource: austria_icon,
   },
   {
-    id: 5,
-    type: "image",
-    src: capsule_hotel_5,
-    country: "NEXT_DESTINATION.TITLES.HUNGARY",
-    desc_text: "NEXT_DESTINATION.DESC.1",
+    videoSource: israel_video,
+    bannerSource: baku_img,
+    countryName: "NEXT_DESTINATION.TITLES.ISRAEL",
+    iconSource: israel_icon,
   },
 ];
 
 export const HomeDestination = () => {
   const { t } = useTranslation("home");
   const [swiperKey] = React.useState(0);
+  const refSlide = React.useRef<SwiperRef>(null);
+  // SwiperCore.use([Navigation]);
+
+  const handleClickChangeSlide = (pos: string) => {
+    console.log(222);
+    pos === "left" ? refSlide.current?.swiper.slidePrev() : refSlide.current?.swiper.slideNext();
+  };
 
   return (
     <Flex bg={"#eaeaea"}>
       <PageSectionContent>
-        <PTitle>{t("TITLES.YOUR_NEXT_DESTINATION")}</PTitle>
-        <Swiper
-          key={swiperKey}
-          style={{
-            height: "auto",
-            //   maxHeight: "calc(100vh - 100px)",
-            maxHeight: "675px",
-            overflow: "visible",
-            margin: "2rem 0 4rem",
-          }}
-          // onSlideChange={(swiper) => handleSwiperTurnOffSlide(swiper)}
-          // autoplay={{ delay: 42000, disableOnInteraction: false }}
-          // effect={"creative"}
-          // grabCursor={false}
-          loop={true}
-          // modules={[Autoplay, Navigation]}
-          // navigation={true}
-          // onSwiper={() => setVideoSoundState(true)}
-          spaceBetween={20}
-          breakpoints={{
-            0: { slidesPerView: 1 },
-            768: { slidesPerView: 2 },
-            992: { slidesPerView: 4 },
-          }}>
-          {silderItemsArr.map((item) => (
-            <SwiperSlide key={item.id}>
-              <Flex flexDir={"column"} align={"center"} gap={4}>
-                <Box h={"100%"} bg={"#fff"} borderRadius={"4px"} boxShadow={"1px 0 6px 1px rgba(0,0,0,.16);"} p={3}>
-                  <Image src={item.src} alt="slider_image" />
-                  <Flex flexDir={"column"}>
-                    <Box as="span" fontSize={"26px"} p={4}>
-                      {t(item.country)}
+        <Box pos={"relative"}>
+          <Box w={"95.5%"} overflow={"hidden"} m={"auto"}>
+            <PTitle>{t("TITLES.YOUR_NEXT_DESTINATION")}</PTitle>
+            <Box as="span" fontSize={{ base: "14px", md: "18px" }}>
+              {t("NEXT_DESTINATION.DESC")}
+            </Box>
+            <Swiper
+              key={swiperKey}
+              ref={refSlide}
+              style={{
+                height: "auto",
+                maxHeight: "675px",
+                overflow: "visible",
+                margin: "3rem 0 4rem",
+              }}
+              onSlideChange={() => console.log("swiper changed")}
+              grabCursor={false}
+              loop={true}
+              // modules={[Navigation]}
+              navigation={false}
+              // onSwiper={() => setVideoSoundState(true)}
+              spaceBetween={20}
+              breakpoints={{
+                0: { slidesPerView: 1 },
+                768: { slidesPerView: 2 },
+                992: { slidesPerView: 4 },
+              }}>
+              {silderItemsArr.map((item, i) => (
+                <SwiperSlide key={i}>
+                  <HomeDestinationSliderItem videoSource={item.videoSource} bannerSource={item.bannerSource} iconSource={item.iconSource} countryName={item.countryName} />
+                  {/* <Flex flexDir={"column"} align={"center"} gap={4}>
+                    <Box
+                      w={"50px"}
+                      h={"50px"}
+                      bg={"brand.blue"}
+                      borderRadius={"50%"}
+                      pos={"absolute"}
+                      top={"-25px"}
+                      transition={"all 350ms"}
+                      p={"10px"}
+                      zIndex={3}
+                      _hover={{ background: "#fff" }}>
+                      <Image src={item.icon_src} alt="icon" />
                     </Box>
-                    {/* <Box as="p">{t(item.desc_text)}</Box> */}
-                  </Flex>
-                </Box>
-                <PButton>{t("NEXT_DESTINATION.BUTTONS.READ_MORE")}</PButton>
-              </Flex>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+                    <Box h={"100%"} bg={"#fff"} borderRadius={"4px"} boxShadow={"1px 0 6px 1px rgba(0,0,0,.16);"} p={3}>
+                      <Box w={"100%"} maxW={"275px"} h={"223px"} bg={"#000"} pos={"relative"} zIndex={1}>
+                        <video controls autoPlay muted loop src={item.src}></video>
+                        <Image src={item.banner_src} alt="icon" w={"100%"} h={"100%"} pos={"absolute"} top={"0"} left={"0"} zIndex={2} objectFit={"cover"} />
+                      </Box>
+                      <Flex flexDir={"column"}>
+                        <Box as="span" fontSize={"26px"} p={4}>
+                          {t(item.country)}
+                        </Box>
+                      </Flex>
+                    </Box>
+                    <PButton>{t("NEXT_DESTINATION.BUTTONS.READ_MORE")}</PButton>
+                  </Flex> */}
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </Box>
+          <Button
+            onClick={() => handleClickChangeSlide("left")}
+            pos={"absolute"}
+            top={"50%"}
+            left={"0"}
+            w={"44px"}
+            h={"44px"}
+            borderRadius={"50%"}
+            zIndex={"99"}
+            bg={"brand.greyC"}
+            _hover={{
+              background: "#fff",
+            }}>
+            <HomeDestinationSliderButton icon={FaArrowLeft} direct={"left"} size={9} />
+          </Button>
+          <Button
+            onClick={() => handleClickChangeSlide("right")}
+            pos={"absolute"}
+            top={"50%"}
+            right={"0"}
+            w={"44px"}
+            h={"44px"}
+            borderRadius={"50%"}
+            zIndex={"99"}
+            bg={"brand.greyC"}
+            _hover={{
+              background: "#fff",
+            }}>
+            <HomeDestinationSliderButton icon={FaArrowRight} direct={"right"} size={9} />
+          </Button>
+        </Box>
       </PageSectionContent>
     </Flex>
   );

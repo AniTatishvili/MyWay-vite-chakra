@@ -18,6 +18,7 @@ interface Colors {
     grey: string;
     greyA: string;
     greyB: string;
+    greyC: string;
     gold: string;
     green: string;
     red: string;
@@ -69,6 +70,7 @@ const colors: Colors = {
     grey: "#eaeaea",
     greyA: "#d9d9d9",
     greyB: "#9d9d9d",
+    greyC: "#414445",
     gold: "#745C26",
     green: "#39884f",
     red: "#b92c2c",

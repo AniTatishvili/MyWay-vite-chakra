@@ -5,8 +5,6 @@ import { Flex, Box, Image } from "@chakra-ui/react";
 import { PTitle } from "src/shared/ui/headings";
 import { PButton } from "src/shared/ui/buttons";
 
-import { MdOutlineBathroom } from "react-icons/md";
-
 import capsule_hotel_1 from "../../../app/assets/images/home/home-capsule-hotel/1.jpg";
 import capsule_hotel_2 from "../../../app/assets/images/home/home-capsule-hotel/10.jpg";
 import capsule_hotel_3 from "../../../app/assets/images/home/home-capsule-hotel/11.jpg";
@@ -47,7 +45,7 @@ export const HomeCapsule = () => {
   return (
     <PageSectionContent>
       <PTitle>{t("TITLES.SLEEP_AT_MYWAY")}</PTitle>
-      <Flex flexDir={"row"} flexWrap={"wrap"} m={"2rem 0 4rem"} gap={10}>
+      <Flex flexDir={"row"} flexWrap={{ base: "wrap", md: "nowrap" }} m={"2rem 0 4rem"} gap={10}>
         {capsuleItemsArr.map((item) => {
           return (
             <Flex key={item.id} flexDir={"column"} alignItems={"center"} gap={6}>

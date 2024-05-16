@@ -20,30 +20,38 @@ export const HomeServices = () => {
             {t("SERVICES.DESC")}
           </Box>
         </Flex>
-        <Flex flexDir={"row"} flexWrap={"wrap"} justify={"space-between"} my={{ base: 10, md: 16 }} gap={4}>
-          <Flex flexDir={"column"} gap={4}>
-            <Image src={sleep} alt="service" />
-            <Box as="h3" color={"brand.gold"} fontSize={{ base: "22px", md: "30px" }} fontWeight={600}>
-              {t("SERVICES.ITEMS.SLEEP")}
-            </Box>
+        <Flex w={"100%"} flexDir={"row"} flexWrap={"wrap"} justify={"space-between"} my={{ base: 10, md: 16 }}>
+          <Flex w={"calc(100% / 4)"} justify={"center"}>
+            <Flex w={"fit-content"} flexDir={"column"} align={"center"} gap={4}>
+              <Image src={sleep} alt="service" maxW={"100px"} h={"65px"} objectFit={"contain"} />
+              <Box as="h3" color={"brand.greyC"} fontSize={{ base: "22px", md: "30px" }} fontWeight={600}>
+                {t("SERVICES.ITEMS.SLEEP")}
+              </Box>
+            </Flex>
           </Flex>
-          <Flex flexDir={"column"} gap={4}>
-            <Image src={eat} alt="service" />
-            <Box as="h3" color={"brand.gold"} fontSize={{ base: "22px", md: "30px" }} fontWeight={600}>
-              {t("SERVICES.ITEMS.EAT")}
-            </Box>
+          <Flex w={"calc(100% / 4)"} justify={"center"} borderLeft={"4px dotted"}>
+            <Flex w={"fit-content"} flexDir={"column"} align={"center"} gap={4}>
+              <Image src={eat} alt="service" maxW={"100px"} h={"65px"} objectFit={"contain"} />
+              <Box as="h3" color={"brand.greyC"} fontSize={{ base: "22px", md: "30px" }} fontWeight={600}>
+                {t("SERVICES.ITEMS.EAT")}
+              </Box>
+            </Flex>
           </Flex>
-          <Flex flexDir={"column"} gap={4}>
-            <Image src={drink} alt="service" />
-            <Box as="h3" color={"brand.gold"} fontSize={{ base: "22px", md: "30px" }} fontWeight={600}>
-              {t("SERVICES.ITEMS.DRINK")}
-            </Box>
+          <Flex w={"calc(100% / 4)"} justify={"center"} borderLeft={"4px dotted"}>
+            <Flex w={"fit-content"} flexDir={"column"} align={"center"} gap={4}>
+              <Image src={drink} alt="service" maxW={"100px"} h={"65px"} objectFit={"contain"} />
+              <Box as="h3" color={"brand.greyC"} fontSize={{ base: "22px", md: "30px" }} fontWeight={600}>
+                {t("SERVICES.ITEMS.DRINK")}
+              </Box>
+            </Flex>
           </Flex>
-          <Flex flexDir={"column"} gap={4}>
-            <Image src={enjoy} alt="service" />
-            <Box as="h3" color={"brand.gold"} fontSize={{ base: "22px", md: "30px" }} fontWeight={600}>
-              {t("SERVICES.ITEMS.ENJOY")}
-            </Box>
+          <Flex w={"calc(100% / 4)"} justify={"center"} borderLeft={"4px dotted"}>
+            <Flex w={"fit-content"} flexDir={"column"} align={"center"} gap={4}>
+              <Image src={enjoy} alt="service" maxW={"100px"} h={"65px"} objectFit={"contain"} />
+              <Box as="h3" color={"brand.greyC"} fontSize={{ base: "22px", md: "30px" }} fontWeight={600}>
+                {t("SERVICES.ITEMS.ENJOY")}
+              </Box>
+            </Flex>
           </Flex>
         </Flex>
       </PageSectionContent>
