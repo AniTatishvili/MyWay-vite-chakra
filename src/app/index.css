@@ -9,7 +9,7 @@ html {
   scroll-behavior: smooth;
 }
 
-.header-logo::after{
+.header-logo::after {
   display: none;
 }
 
@@ -25,8 +25,8 @@ html {
   transition: all 350ms;
   a {
     text-decoration: none;
-    &.active{
-      color: #2DA2DC;
+    &.active {
+      color: #2da2dc;
     }
   }
 }
@@ -34,7 +34,7 @@ html {
 /*datepicker*/
 .react-datepicker__input-container {
   background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 1px 0 6px 1px rgba(0, 0, 0, .16);
+  /* border-radius: 10px;
+  box-shadow: 1px 0 6px 1px rgba(0, 0, 0, .16); */
   padding: 8px 16px;
 }

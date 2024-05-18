@@ -29,6 +29,16 @@
   },
   "SLEEP_AT_MYWAY": {
     "DESC": "One of the hottest areas currently in the world of crowdfunding is real estate. A swiss study found that the growth in crowdinvesting there was driven principally by real estate crowdinvesting. This segment, which emerged in Switzerland only in 2015, had by 2016 already reached 32.4 million swiss francs in funds raised.",
+    "PRODUCTS": {
+      "1": "Beauty & Relax",
+      "2": "Co-Work",
+      "3": "Capsule sleep Pod",
+      "4": "Hostel",
+      "5": "Cube Room",
+      "6": "Company Seat",
+      "7": "Media Studio",
+      "8": "Internet & Telephone"
+    },
     "BUTTONS": {
       "KNOW_MORE_HERE": "Know more here"
     }

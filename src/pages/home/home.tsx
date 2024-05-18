@@ -1,4 +1,3 @@
-import React from "react";
 import { HomeSlider } from "./home-slider/home-slider";
 import { HomeDestination } from "./home-destination";
 import { HomeServices } from "./home-services/home-services";

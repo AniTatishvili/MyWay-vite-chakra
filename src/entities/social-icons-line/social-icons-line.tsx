@@ -1,34 +1,33 @@
-import React from "react";
 import { Flex } from "@chakra-ui/react";
 import { SocialIcon } from "src/shared/ui/social-icons/social-icon";
-import { FaInstagram, FaFacebook, FaTwitter, FaLinkedin, FaYoutube } from "react-icons/fa";
+import { FaFacebookF, FaSquareInstagram, FaLinkedinIn, FaTiktok, FaPinterest } from "react-icons/fa6";
 
 export const SocialIconsLine = () => {
   return (
     <Flex display={{ base: "none", md: "flex" }} flexDir="row" justifyContent="space-between" w="fit-content" gap={2}>
-      <a href="https://www.facebook.com/money4you.finance">
+      <a href="#">
         <SocialIcon>
-          <FaFacebook />
+          <FaSquareInstagram />
         </SocialIcon>
       </a>
-      <a href="https://twitter.com/money4you_ag">
+      <a href="#">
         <SocialIcon>
-          <FaTwitter />
+          <FaFacebookF />
         </SocialIcon>
       </a>
-      <a href="https://www.linkedin.com/company/money4you-financial-ag">
+      <a href="#">
         <SocialIcon>
-          <FaLinkedin />
+          <FaLinkedinIn />
         </SocialIcon>
       </a>
-      <a href="https://www.instagram.com/money4you.financial/">
+      <a href="#">
         <SocialIcon>
-          <FaInstagram />
+          <FaTiktok />
         </SocialIcon>
       </a>
-      <a href="https://www.youtube.com/channel/UCZZcwYeRUZLr6CYA-wfiDMg">
+      <a href="#">
         <SocialIcon>
-          <FaYoutube />
+          <FaPinterest />
         </SocialIcon>
       </a>
     </Flex>

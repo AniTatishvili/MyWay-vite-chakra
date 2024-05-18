@@ -1,12 +1,12 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { Flex, Box, Menu, MenuButton, MenuList, MenuItem } from "@chakra-ui/react";
-import { PageSectionContent } from "src/entities/layouts/PageSectionContent";
+import { ReactCountryFlag } from "react-country-flag";
 import { MdKeyboardArrowDown } from "react-icons/md";
+import { PageSectionContent } from "src/entities/layouts/PageSectionContent";
 import { HeaderMenu } from "./menu/header-menu";
 import { MobileMenu } from "src/entities/menu";
 import { Logotype } from "src/shared/ui/logotype";
-import { ReactCountryFlag } from "react-country-flag";
 import s from "./header.module.scss";
 
 interface Language {
@@ -46,18 +46,20 @@ export const Header: React.FC = () => {
                 display={"flex"}
                 alignItems={"center"}
                 justifyContent={"center"}
-                p={"6px 8px"}
+                // p={"6px 8px"}
                 border={"none"}
-                borderRadius={"4px"}
+                // borderRadius={"4px"}
                 transition={"all 350ms, border 100ms"}
-                boxShadow={"1px 0 6px 1px rgba(0,0,0,.16);"}
-                color={"brand.gold"}
-                _hover={{
-                  borderColor: "brand.blue",
-                  background: "brand.blue",
-                  boxShadow: "none",
-                  color: "#fff",
-                }}>
+                // boxShadow={"1px 0 6px 1px rgba(0,0,0,.16);"}
+                // color={"brand.gold"}
+                _hover={
+                  {
+                    // borderColor: "brand.blue",
+                    // background: "brand.blue",
+                    // boxShadow: "none",
+                    // color: "#fff",
+                  }
+                }>
                 <Flex align={"center"} justify={"center"} gap={"1"}>
                   <Flex w={6} h={6} justify={"center"} align={"center"} borderRadius={"50%"} overflow={"hidden"}>
                     <ReactCountryFlag
