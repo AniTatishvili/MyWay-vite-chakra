@@ -29,7 +29,7 @@ export const HomeDestinationSliderItem = (props: SliderItemType) => {
         <Image src={iconSource} alt="icon" />
       </Box>
       <Box h={"100%"} bg={"#fff"} cursor={"pointer"} borderRadius={"4px"} boxShadow={"1px 0 6px 1px rgba(0,0,0,.16);"} p={3}>
-        <Box w={"100%"} maxW={"275px"} h={"223px"} bg={"#000"}>
+        <Box w={"275px"} h={"223px"} bg={"#000"}>
           <HomeDestinationSliderItemButton bannerSource={bannerSource} videoSource={videoSource} />
         </Box>
         <Flex flexDir={"column"}>

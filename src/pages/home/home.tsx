@@ -3,7 +3,7 @@ import { HomeDestination } from "./home-destination";
 import { HomeServices } from "./home-services/home-services";
 import { HomeCapsule } from "./home-capsule";
 import { HomeFood } from "./home-food";
-import { HomeQuestions } from "./home-newsletter";
+import { HomeNewsletter } from "./home-newsletter";
 
 export const Home = () => {
   return (
@@ -13,7 +13,7 @@ export const Home = () => {
       <HomeDestination />
       <HomeCapsule />
       <HomeFood />
-      <HomeQuestions />
+      <HomeNewsletter />
     </>
   );
 };

@@ -1,15 +1,16 @@
-import React from 'react';
-import { Button } from '@chakra-ui/react';
+import React from "react";
+import { Button, ButtonProps } from "@chakra-ui/react";
 
-interface BProps{
-    props?: any;
-    children?: React.ReactNode;
-    className?: string;
-    onClick?: React.MouseEventHandler;
+interface BProps extends ButtonProps {
+  children?: React.ReactNode;
+  className?: string;
+  onClick?: React.MouseEventHandler;
 }
 
-export const PButton = ({props, children, className, onClick}: BProps) => {
+export const PButton = ({ children, className, onClick, ...props }: BProps) => {
   return (
-    <Button {...props} className={className} onClick={onClick} bg={"#fff"} mx={8} border={"2px solid #000"} borderRadius={"25px"}>{children}</Button>
-  )
-}
+    <Button {...props} className={className} onClick={onClick} bg={"none"} border={"2px solid #000"} borderRadius={"25px"}>
+      {children}
+    </Button>
+  );
+};

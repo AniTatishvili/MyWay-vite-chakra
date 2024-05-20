@@ -83,8 +83,8 @@ export const HomeDestination = () => {
   return (
     <Flex bg={"#eaeaea"}>
       <PageSectionContent>
-        <Box pos={"relative"}>
-          <Box w={"95.5%"} overflow={"hidden"} m={"auto"}>
+        <Flex justify={"center"} pos={"relative"}>
+          <Box w={"calc(100% - 44px)"} overflow={"hidden"}>
             <PTitle>{t("TITLES.YOUR_NEXT_DESTINATION")}</PTitle>
             <Box as="span" fontSize={{ base: "14px", md: "18px" }}>
               {t("NEXT_DESTINATION.DESC")}
@@ -174,7 +174,7 @@ export const HomeDestination = () => {
             }}>
             <HomeDestinationSliderButton icon={FaArrowRight} direct={"right"} size={9} />
           </Button>
-        </Box>
+        </Flex>
       </PageSectionContent>
     </Flex>
   );

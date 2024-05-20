@@ -12,8 +12,8 @@ export const HomeDestinationSliderItemButton = (props: SliderItemType) => {
   return (
     <ReactPlayer
       url={videoSource}
-      width="275px"
-      height="223px"
+      width="100%"
+      height="100%"
       playing
       controls
       light={bannerSource}

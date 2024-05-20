@@ -1,1 +1,1 @@
-export * from "./home-questions";
+export * from "./home-newsletter";
