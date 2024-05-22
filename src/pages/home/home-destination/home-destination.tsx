@@ -13,11 +13,11 @@ import "swiper/css/autoplay";
 import "swiper/css/navigation";
 import "swiper/swiper-bundle.css";
 
-import vienna_video from "../../../app/assets/videos/home/home-destination/vienna.mp4";
-import baku_video from "../../../app/assets/videos/home/home-destination/baku.mp4";
-import georgia_video from "../../../app/assets/videos/home/home-destination/1.mp4";
-import hungary_video from "../../../app/assets/videos/home/home-destination/2.mp4";
-import israel_video from "../../../app/assets/videos/home/home-destination/3.mp4";
+import vienna_video from "../../../app/assets/videos/home/home-destination/austria.mp4";
+import baku_video from "../../../app/assets/videos/home/home-destination/azerbaijan.mp4";
+import georgia_video from "../../../app/assets/videos/home/home-destination/georgia.mp4";
+import hungary_video from "../../../app/assets/videos/home/home-destination/hungary.mp4";
+import israel_video from "../../../app/assets/videos/home/home-destination/israel.mp4";
 
 import vienna_img from "../../../app/assets/images/home/home-destination/vienna.jpg";
 import baku_img from "../../../app/assets/images/home/home-destination/baku.jpg";

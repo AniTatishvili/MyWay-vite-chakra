@@ -10,15 +10,13 @@ import "swiper/css/autoplay";
 import "swiper/css/navigation";
 import "swiper/swiper-bundle.css";
 
-import vienna_video from "../../../app/assets/videos/home/home-destination/vienna.mp4";
-import baku_video from "../../../app/assets/videos/home/home-destination/baku.mp4";
-import georgia_video from "../../../app/assets/videos/home/home-destination/1.mp4";
-import hungary_video from "../../../app/assets/videos/home/home-destination/2.mp4";
-import israel_video from "../../../app/assets/videos/home/home-destination/3.mp4";
+import bistro_box from "../../../app/assets/videos/home/home-food/bistro-box.mp4";
+import fun_park from "../../../app/assets/videos/home/home-food/fun-park.mp4";
+import street_food from "../../../app/assets/videos/home/home-food/street-food.mp4";
 
-import vienna_img from "../../../app/assets/images/home/home-destination/vienna.jpg";
-import baku_img from "../../../app/assets/images/home/home-destination/baku.jpg";
-import budapest_img from "../../../app/assets/images/home/home-destination/budapest.jpg";
+import bistro_img from "../../../app/assets/images/home/home-food/bistro.png";
+import fun_park_img from "../../../app/assets/images/home/home-food/fun-food.png";
+import street_food_img from "../../../app/assets/images/home/home-food/street-food.png";
 
 interface SliderItemType {
   videoSource: string;
@@ -27,24 +25,16 @@ interface SliderItemType {
 
 const silderItemsArr: SliderItemType[] = [
   {
-    videoSource: hungary_video,
-    bannerSource: budapest_img,
+    videoSource: bistro_box,
+    bannerSource: bistro_img,
   },
   {
-    videoSource: baku_video,
-    bannerSource: baku_img,
+    videoSource: fun_park,
+    bannerSource: fun_park_img,
   },
   {
-    videoSource: georgia_video,
-    bannerSource: budapest_img,
-  },
-  {
-    videoSource: vienna_video,
-    bannerSource: vienna_img,
-  },
-  {
-    videoSource: israel_video,
-    bannerSource: baku_img,
+    videoSource: street_food,
+    bannerSource: street_food_img,
   },
 ];
 

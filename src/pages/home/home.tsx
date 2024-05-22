@@ -1,7 +1,7 @@
 import { HomeSlider } from "./home-slider/home-slider";
 import { HomeDestination } from "./home-destination";
 import { HomeServices } from "./home-services/home-services";
-import { HomeCapsule } from "./home-capsule";
+import { HomeProducts } from "./home-products";
 import { HomeFood } from "./home-food";
 import { HomeNewsletter } from "./home-newsletter";
 
@@ -11,7 +11,7 @@ export const Home = () => {
       <HomeSlider />
       <HomeServices />
       <HomeDestination />
-      <HomeCapsule />
+      <HomeProducts />
       <HomeFood />
       <HomeNewsletter />
     </>
