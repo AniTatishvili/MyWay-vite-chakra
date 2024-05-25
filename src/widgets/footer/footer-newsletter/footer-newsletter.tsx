@@ -5,7 +5,7 @@ import newsletter_icon from "../../../app/assets/images/newsletter/newsletter-ic
 export const FooterNewsletter = () => {
   return (
     <Flex align={"center"} justify={"center"} wrap={{ base: "wrap", md: "nowrap" }} m={"2rem 0 4rem"} gap={10}>
-      <Flex flexDir={"column"} fontWeight={600} gap={4}>
+      <Flex flexDir={"column"} fontWeight={600} gap={4} order={{ base: 2, md: 1 }}>
         <Text fontSize={"18px"}>Our special offers and our best deals, nothing more!</Text>
         <FooterNewsletterForm />
       </Flex>

@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { Box, Flex, Image } from "@chakra-ui/react";
 import { PButton } from "src/shared/ui/buttons";
-import { HomeDestinationSliderItemButton } from "./home-destination-slider-item-button";
+import { RPlayer } from "src/shared/ui/video-players";
 
 interface SliderItemType {
   videoSource: string;
@@ -30,7 +30,7 @@ export const HomeDestinationSliderItem = (props: SliderItemType) => {
       </Box>
       <Box h={"100%"} bg={"#fff"} cursor={"pointer"} borderRadius={"4px"} boxShadow={"1px 0 6px 1px rgba(0,0,0,.16);"} p={3}>
         <Box w={"275px"} h={"223px"} bg={"#000"}>
-          <HomeDestinationSliderItemButton bannerSource={bannerSource} videoSource={videoSource} />
+          <RPlayer bannerSource={bannerSource} videoSource={videoSource} />
         </Box>
         <Flex flexDir={"column"}>
           <Box as="span" fontSize={"26px"} p={4}>

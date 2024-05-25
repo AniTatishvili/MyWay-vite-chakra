@@ -48,18 +48,9 @@ export const HomeFoodSlider = () => {
   };
 
   return (
-    <Flex w={"60%"} justify={"center"} pos={"relative"}>
+    <Flex w={{ base: "100%", lg: "60%" }} justify={"center"} pos={"relative"}>
       <Flex w={"calc(100% - 44px)"}>
-        <Swiper
-          key={swiperKey}
-          ref={refSlide}
-          grabCursor={false}
-          loop={true}
-          // modules={[Navigation]}
-          navigation={false}
-          // onSwiper={() => setVideoSoundState(true)}
-          spaceBetween={10}
-          slidesPerView={1}>
+        <Swiper key={swiperKey} ref={refSlide} grabCursor={false} loop={true} navigation={false} spaceBetween={10} slidesPerView={1}>
           {silderItemsArr.map((item, i) => (
             <SwiperSlide key={i}>
               <HomeFoodSliderItem videoSource={item.videoSource} bannerSource={item.bannerSource} />
@@ -77,7 +68,7 @@ export const HomeFoodSlider = () => {
         h={"44px"}
         borderRadius={"50%"}
         zIndex={"99"}
-        bg={"brand.greyC"}
+        bg={"brand.blue"}
         _hover={{
           background: "#fff",
         }}>
@@ -93,7 +84,7 @@ export const HomeFoodSlider = () => {
         h={"44px"}
         borderRadius={"50%"}
         zIndex={"99"}
-        bg={"brand.greyC"}
+        bg={"brand.blue"}
         _hover={{
           background: "#fff",
         }}>

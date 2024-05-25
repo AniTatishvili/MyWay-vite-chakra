@@ -3,15 +3,7 @@ import { useTranslation } from "react-i18next";
 
 import { Box, Button, Flex } from "@chakra-ui/react";
 import { BookingCalendarForm } from "src/widgets/booking-calendar-form";
-// import { PButton } from "shared/ui";
-// import { HomeSliderItem } from "./home-slider-item";
 
-// import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-// import { MdOutlineKeyboardDoubleArrowLeft, MdOutlineKeyboardDoubleArrowRight } from "react-icons/md";
-
-// swiper
-// import Autoplay from "swiper";
-// import Navigation from "swiper";
 import { Swiper, SwiperRef, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
@@ -22,68 +14,48 @@ import "swiper/css/navigation";
 
 import MyWayCapsuleHotel from "../../../app/assets/videos/MyWayCapsuleHotel.webm";
 
-// import { SlideSoureType, SliderItemType } from "shared/types/homepage";
-// import { HomeSliderButton } from "./home-slider-button";
-// import { HomeSliderSoundBtn } from "./home-slider-sound-btn";
-
 export const HomeSlider = () => {
-  const { t } = useTranslation("home");
-
-  // const [videoSoundState, setVideoSoundState] = useState<boolean>(true);
-
   const [swiperKey, setSwiperKey] = React.useState(0);
 
   const refSlide = useRef<SwiperRef>(null);
-  // const refBtn = useRef<HTMLButtonElement>(null);
-
-  const handleClickChangeSlide = (pos: string) => {
-    pos === "left" ? refSlide.current?.swiper.slidePrev() : refSlide.current?.swiper.slideNext();
-  };
 
   return (
     <Flex w={"100%"} h={"100%"} flexDir={"column"} justifyContent={"100%"} pos={"relative"}>
       <Flex w={"100%"}>
         <Flex
+          w={"1440px"}
           pos={"absolute"}
-          top={{ base: "30%", md: "25%" }}
+          top={{ base: "50%", md: "50%" }}
           left={"50%"}
           transform={"translate(-50%, -50%)"}
           flexDir={"column"}
+          p={"0 1rem"}
           gap={{ base: "2", md: "5" }}
           letterSpacing={"2px"}
-          fontSize={"3xl"}
+          fontSize={{ base: "xl", md: "4xl", lg: "5xl" }}
           fontWeight={"extrabold"}
-          textAlign={"center"}
-          color={"brand.light"}
+          textAlign={"start"}
+          color={"brand.white"}
           zIndex={"2"}>
-          {/* <Box as="span" fontSize={{ base: "xl", md: "4xl", lg: "6xl" }} textShadow={"md"}>
-            money
-            <Box as="span" color={"brand.red"}>
-              4
-            </Box>
-            you.financial
-          </Box> */}
+          <Box as="span" w={"fit-content"} bg={"rgba(0, 0, 0, .8)"} transform={"rotate(-2deg)"} p={2}>
+            Just like home!
+          </Box>
+          <Box as="span" w={"fit-content"} bg={"rgba(0, 0, 0, .8)"} p={2}>
+            Simply somewhere else
+          </Box>
         </Flex>
         <Swiper
           key={swiperKey}
           ref={refSlide}
           style={{
             height: "auto",
-            //   maxHeight: "calc(100vh - 100px)",
             maxHeight: "675px",
             overflow: "hidden",
           }}
-          // onSlideChange={(swiper) => handleSwiperTurnOffSlide(swiper)}
-          // autoplay={{ delay: 42000, disableOnInteraction: false }}
-          // effect={"creative"}
-          // grabCursor={false}
           loop={true}
-          // modules={[Autoplay, Navigation]}
           navigation={false}
-          // onSwiper={() => setVideoSoundState(true)}
           slidesPerView={1}
           spaceBetween={0}>
-          {/* {videoItemsArr.map((item, i) => ( */}
           <SwiperSlide>
             <Box h={"100%"}>
               <video autoPlay loop muted={true} style={{ width: "100%", height: "100%", background: "#000", objectFit: "contain" }}>
@@ -100,47 +72,8 @@ export const HomeSlider = () => {
           </SwiperSlide>
           {/* ))} */}
         </Swiper>
-
-        <Button
-          onClick={() => handleClickChangeSlide("left")}
-          pos={"absolute"}
-          top={"50%"}
-          left={"0"}
-          w={"60px"}
-          // height={"100%"}
-          // px={"5px"}
-          zIndex={"99"}
-          bg={"transparent"}
-          _hover={{
-            background: "transparent",
-          }}
-          // bg={"#ffffff60"}
-          // borderRadius={"0px"}
-        >
-          {/* <HomeSliderButton icon={MdOutlineKeyboardDoubleArrowLeft} direct={"left"} size={9} /> */}
-        </Button>
-        <Button
-          onClick={() => handleClickChangeSlide("right")}
-          pos={"absolute"}
-          top={"50%"}
-          right={"0"}
-          w={"60px"}
-          // height={"100%"}
-          // px={"5px"}
-          zIndex={"99"}
-          bg={"transparent"}
-          _hover={{
-            background: "transparent",
-          }}
-          // bg={"#ffffff60"}
-          // borderRadius={"0px"}
-        >
-          {/* <HomeSliderButton icon={MdOutlineKeyboardDoubleArrowRight} direct={"right"} size={9} /> */}
-        </Button>
       </Flex>
-      <Flex pos={"absolute"} bottom={"30px"} left={"50%"} zIndex={"99"} transform={"translate(-50%, -30px)"}>
-        <BookingCalendarForm />
-      </Flex>
+      <BookingCalendarForm />
     </Flex>
   );
 };

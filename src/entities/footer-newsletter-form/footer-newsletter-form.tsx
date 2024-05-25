@@ -2,7 +2,7 @@ import { Flex, Input, FormControl, FormLabel } from "@chakra-ui/react";
 import { FooterNewsletterFormButton } from "./ui";
 export const FooterNewsletterForm = () => {
   return (
-    <FormControl w={"fit-content"} order={{ base: 2, md: 1 }}>
+    <FormControl w={"fit-content"}>
       <Flex maxW={"400px"} w={"100%"} flexDir={"column"} gap={4}>
         <Flex w={"400px"} flexDir={"column"}>
           <FormLabel fontSize={"16px"} fontWeight={600}>

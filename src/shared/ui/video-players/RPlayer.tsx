@@ -3,11 +3,11 @@ import { Button } from "@chakra-ui/react";
 import { FiPlayCircle } from "react-icons/fi";
 
 interface SliderItemType {
-  bannerSource: string;
+  bannerSource?: string;
   videoSource: string;
 }
 // https://vimeo.com/243556536
-export const HomeDestinationSliderItemButton = (props: SliderItemType) => {
+export const RPlayer = (props: SliderItemType) => {
   const { bannerSource, videoSource } = props;
   return (
     <ReactPlayer

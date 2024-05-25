@@ -11,7 +11,7 @@ export const HomeDestinationSliderButton = (props: HomeDestinationSliderButtonPr
   const { icon, size, direct } = props;
 
   return (
-    <Box pos={"absolute"} color={"brand.blue"} p={"10px"} className={direct === "left" ? "homeSliderLeft" : "homeSliderRight"}>
+    <Box pos={"absolute"} color={"#000"} p={"10px"} className={direct === "left" ? "homeSliderLeft" : "homeSliderRight"}>
       <Icon as={icon} boxSize={size} w={"100%"} />
     </Box>
   );

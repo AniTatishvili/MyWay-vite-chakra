@@ -9,7 +9,7 @@ interface BProps extends ButtonProps {
 
 export const PButton = ({ children, className, onClick, ...props }: BProps) => {
   return (
-    <Button {...props} className={className} onClick={onClick} bg={"none"} border={"2px solid #000"} borderRadius={"25px"}>
+    <Button {...props} className={className} onClick={onClick} bg={"none"} border={"2px solid #000"} borderRadius={"25px"} _hover={{ bg: "brand.blue", transition: "all 350ms" }}>
       {children}
     </Button>
   );

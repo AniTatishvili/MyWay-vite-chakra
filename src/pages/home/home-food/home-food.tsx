@@ -1,16 +1,17 @@
 import { PageSectionContent } from "../../../entities/layouts/PageSectionContent";
 import { useTranslation } from "react-i18next";
-import { Flex, Box, Text } from "@chakra-ui/react";
+import { Flex, Box, Text, Image } from "@chakra-ui/react";
 import { PTitle } from "../../../shared/ui/headings";
 import { HomeFoodSlider } from "./home-food-slider";
 import { PButton } from "src/shared/ui/buttons";
-// import bg from "../../../app/assets/images/home/Untitled design.jpg";
+import circle from "../../../app/assets/images/home/8.svg";
 
 export const HomeFood = () => {
   const { t } = useTranslation("home");
   // bg={"#eaeaea"}
   return (
-    <Flex w={"100%"} bg={"#eaeaea"}>
+    <Flex w={"100%"} bg={"#eaeaea"} pos={"relative"}>
+      <Image src={circle} alt="circle" w={"12%"} pos={"absolute"} top={0} left={"20px"} />
       <PageSectionContent>
         <Flex w={"100%"} flexDir={"row"} justify={"space-between"} m={"2rem 0 4rem"} gap={10}>
           <HomeFoodSlider />
@@ -33,6 +34,7 @@ export const HomeFood = () => {
           </Flex>
         </Flex>
       </PageSectionContent>
+      <Image src={circle} alt="circle" w={"20%"} pos={"absolute"} bottom={0} right={"20px"} />
     </Flex>
   );
 };

@@ -7,7 +7,7 @@ interface IProps {
 
 export const SocialIcon = ({ children }: IProps) => {
   return (
-    <Button w={"45px"} h={"45px"} bg={"#fff"} color={"brand.blue"} fontSize={"1.5rem"} borderRadius={"50%"} p={"0"} _hover={{ color: "brand.gold" }}>
+    <Button w={"45px"} h={"45px"} bg={"#fff"} color={"brand.blue"} fontSize={"1.5rem"} borderRadius={"50%"} p={"0"} _hover={{ color: "brand.black" }}>
       {children}
     </Button>
   );

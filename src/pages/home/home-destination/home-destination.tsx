@@ -153,7 +153,7 @@ export const HomeDestination = () => {
             h={"44px"}
             borderRadius={"50%"}
             zIndex={"99"}
-            bg={"brand.greyC"}
+            bg={"brand.blue"}
             _hover={{
               background: "#fff",
             }}>
@@ -168,7 +168,7 @@ export const HomeDestination = () => {
             h={"44px"}
             borderRadius={"50%"}
             zIndex={"99"}
-            bg={"brand.greyC"}
+            bg={"brand.blue"}
             _hover={{
               background: "#fff",
             }}>
