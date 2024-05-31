@@ -7,7 +7,6 @@ import { PageSectionContent } from "src/entities/layouts/PageSectionContent";
 import { HeaderMenu } from "./menu/header-menu";
 import { MobileMenu } from "src/entities/menu";
 import { Logotype } from "src/shared/ui/logotype";
-import s from "./header.module.scss";
 
 interface Language {
   [key: string]: { nativeName: string };
@@ -30,15 +29,15 @@ export const Header: React.FC = () => {
   const lngIconCode = i18n.resolvedLanguage && i18n.resolvedLanguage !== "en" ? i18n.resolvedLanguage : "us";
 
   return (
-    <Flex className={s.header}>
+    <Flex w={"100%"} bg={"#fff"} pos={"sticky"} top={"0"} zIndex={"999"} boxShadow={"0 0 6px rgba(0,0,0,.25)"}>
       <PageSectionContent>
         <Flex align={"center"} justify={"space-between"}>
           <Logotype />
           <Flex align={"center"} flexDir={"row"} gap={{ base: 4, md: 8 }}>
-            <Box className={s.desktop}>
+            <Box display={{ base: "none", lg: "block" }}>
               <HeaderMenu />
             </Box>
-            <Box className={s.mobile}>
+            <Box display={{ base: "block", lg: "none" }}>
               <MobileMenu />
             </Box>
             <Menu>

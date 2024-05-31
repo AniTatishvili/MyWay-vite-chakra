@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import { List, ListItem } from "@chakra-ui/react";
 import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
@@ -9,11 +9,11 @@ interface MenuListProps {
 }
 
 export const MenuList: React.FC<MenuListProps> = ({ flexDir, gap }) => {
-  const { t, i18n } = useTranslation("common");
+  const { t } = useTranslation("common");
 
   return (
     <List display={"flex"} flexDir={flexDir} gap={gap}>
-      <ListItem className="header-menu-link">
+      <ListItem className="header-menu-link" pos={"relative"}>
         <NavLink to={"/"}>{t("NAVIGATION.MENU.HOME")}</NavLink>
       </ListItem>
       <ListItem className="header-menu-link">
@@ -29,5 +29,5 @@ export const MenuList: React.FC<MenuListProps> = ({ flexDir, gap }) => {
         <NavLink to={"/contact"}>{t("NAVIGATION.MENU.CONTACT")}</NavLink>
       </ListItem>
     </List>
-  )
-}
+  );
+};
