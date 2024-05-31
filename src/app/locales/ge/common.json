@@ -1,0 +1,49 @@
+{
+  "USER": {
+    "AUTH": {
+      "SIGNIN": "Sign in",
+      "SIGNUP": "Sign up",
+      "FORGOT_YOUR_PASSWORD": "Forgot your password?"
+    }
+  },
+  "NAVIGATION": {
+    "MENU": {
+      "HOME": "მთავარი",
+      "DESTINATION": "დანიშნულება",
+      "SLEEP": "ძილი",
+      "BAR_RESTAURANT": "ბარი & რესტორანი",
+      "CONTACT": "კონტაქტი"
+    }
+  },
+  "NOTFOUND": {
+    "HEADING": "We can't find that page",
+    "TEXT": "We're fairly sure that page used to be here, but seems to have gone missing. We do apologise on it's behalf."
+  },
+  "BUTTONS": {
+    "BOOK_NOW": "დაჯავშნა",
+    "BACK": "Get back"
+  },
+  "FOOTER": {
+    "HEADINGS": {
+      "SERVICE": "Service",
+      "LEGALS": "Legals",
+      "ACCESSIBILITY": "Accessibility"
+    },
+    "TEXTS": {
+      "ANNOTATION": "Book an overnight stay and be rewarded for your bookings in any of our MyWay."
+    },
+    "LINKS": {
+      "CONTACT": "contact",
+      "FAQ": "FAQ",
+      "MEDIA_PRESS": "Media & Press",
+      "INVESTORS": "Investors",
+      "CAREERS": "Careers",
+      "PRIVACY_POLICY": "Privacy policy",
+      "COOKIES_POLICY": "Cookies policy",
+      "TERMS_CONDITIONS": "Terms and Conditions",
+      "DISCLAIMER": "Disclaimer",
+      "ACCESSIBILITY": "Accessibility"
+    },
+    "COPYRIGHT": "© {{year}} money4you.financial. All rights reserved."
+  }
+}

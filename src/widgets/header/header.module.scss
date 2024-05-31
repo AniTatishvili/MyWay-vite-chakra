@@ -1,0 +1,82 @@
+.fullbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+    z-index: 999;
+  }
+  
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1.5px 0 5px;
+    border-bottom: 1px solid #99999922;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+  }
+  
+  .mobile {
+    display: none;
+    @media (max-width: 840px) {
+      display: block;
+    }
+  }
+  
+  .desktop {
+    display: block;
+    @media (max-width: 840px) {
+      display: none;
+    }
+  }
+  
+.header {
+  width: 100%;
+  background-color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0 0 6px rgba(0,0,0,.25);
+  a{
+    color: #000;
+    transition: all 350ms, border 100ms;
+    position: relative;
+    &::after{
+        content: '';
+        width: 0;
+        height: 2px;
+        background-color: #000;
+        position: absolute;
+        left: 2%;
+        bottom: -5px;
+        transform: scaleX(0);
+        transition: transform 250ms ease-in-out;
+    }
+    // &:hover{
+    //   color: #2DA2DC;
+    // }
+    &:hover::after {
+      content: '';
+      width: 96%;
+      transform: scaleX(1);
+    }
+  }
+
+  .mobile {
+    display: none;
+    @media (max-width: 840px) {
+      display: block;
+    }
+  }
+  
+  .desktop {
+    display: block;
+    @media (max-width: 840px) {
+      display: none;
+    }
+  }
+}
