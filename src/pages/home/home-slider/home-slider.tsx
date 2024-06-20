@@ -20,7 +20,7 @@ export const HomeSlider = () => {
   const refSlide = useRef<SwiperRef>(null);
 
   return (
-    <Flex w={"100%"} h={"100%"} flexDir={"column"} justifyContent={"100%"}>
+    <Flex w={"100%"} h={"100%"} flexDir={"column"} justifyContent={"100%"} pos={"relative"}>
       <Flex w={"100%"}>
         <Flex
           w={"1440px"}

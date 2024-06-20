@@ -4,6 +4,7 @@ import { Flex } from "@chakra-ui/react";
 import DatePicker from "react-datepicker";
 import { Select } from "@chakra-ui/react";
 import { BookNowButton } from "src/shared/ui/buttons";
+import { useInView } from "react-intersection-observer";
 
 import "react-datepicker/dist/react-datepicker.css";
 
@@ -70,11 +71,21 @@ export const BookingCalendar = () => {
   const { t } = useTranslation("common");
   const [startDate, setStartDate] = React.useState(new Date());
 
+  const { ref, inView } = useInView({
+    threshold: 0.8,
+  });
+
+  React.useEffect(() => {
+    if (inView) {
+      console.log(11);
+    }
+  }, [inView]);
+
   return (
-    <Flex w={"100%"} pos={"sticky"} top={"204px"} zIndex={"99999999999"}>
+    <Flex w={inView ? "fit-content" : "100%"} pos={"sticky"} top={"204px"} zIndex={"99999999999"} ref={ref}>
       <Flex
-        w={"100%"}
-        bg={"#fff"}
+        w={inView ? "fit-content" : "100%"}
+        bg={inView ? "#fff" : "red"}
         flexDir={"row"}
         alignItems={"center"}
         p={"20px 25px"}
